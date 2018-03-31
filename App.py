@@ -26,9 +26,13 @@ def main_post():
     access_token = "979775373259939840-DDDek84ir8J2KiQvOYkyTe7Id7hbl6L"
     access_token_secret = "QEMzP0TKy9o9Qzc4KWuqSlWEoaJqb1IfJN4GU9dqjQypl"
 
-    ## AYLIEN credentials
-    application_id = "d76be905"
-    application_key = "2356630621308b78239da37a78302824"
+    # ## AYLIEN credentials for vikrame99
+    # application_id = "d76be905"
+    # application_key = "2356630621308b78239da37a78302824"
+
+    #  AYLIEN credentials for vikrame1999
+    application_id = "75466c1a"
+    application_key = "f0f2bd63b6805755c56cf33c6c4064b5"
 
     ## set up an instance of Tweepy
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -40,7 +44,7 @@ def main_post():
 
     ## search Twitter for something that interests you
     query = data['search']
-    number = 50
+    number = 10
 
     results = api.search(
         lang="en",
