@@ -21,18 +21,13 @@ def main_post():
     data = request.get_json()
     print(data['search'])
     ## Twitter credentials
-    consumer_key = "1OZ5IG1fFL4mJeibMsiBsIgAP"
-    consumer_secret = "wwRLUKEn72E1j8t4EmMDMlYFoKb0tFcAr4Zd0pxYVe4uw7Xyqz"
-    access_token = "979775373259939840-DDDek84ir8J2KiQvOYkyTe7Id7hbl6L"
-    access_token_secret = "QEMzP0TKy9o9Qzc4KWuqSlWEoaJqb1IfJN4GU9dqjQypl"
+    consumer_key = "xxxxxxxxxxxxx"
+    consumer_secret = "xxxxxxxxxxxxxxxxxxxxxxx"
+    access_token = "xxxxxxxxxxxxxxxxx"
+    access_token_secret = "xxxxxxxxxxxxxxxxxxxxxxxx"
 
-    # ## AYLIEN credentials for vikrame99
-    # application_id = "d76be905"
-    # application_key = "2356630621308b78239da37a78302824"
-
-    #  AYLIEN credentials for vikrame1999
-    application_id = "75466c1a"
-    application_key = "f0f2bd63b6805755c56cf33c6c4064b5"
+    application_id = "xxxxxxxxxxx"
+    application_key = "xxxxxxxxxxxxxx"
 
     ## set up an instance of Tweepy
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -95,10 +90,11 @@ def main_post():
         negative = counter['negative']
         neutral = counter['neutral']
 
-    ## declare the variables for the pie chart, using the Counter variables for "sizes"
+    ## declare the variables for the pie chart, using the Counter variables for "sizes" (not required for a web app)
     colors = ['green', 'red', 'grey']
     sizes = [positive, negative, neutral]
     labels = 'Positive', 'Negative', 'Neutral'
+    
     return jsonify({'positive':positive,'negative':negative,'neutral':neutral})
 
 if __name__ =='__main__':
